@@ -90,7 +90,7 @@ class GitLabManager extends AbstractManager
      *
      * @return \Gitlab\Client
      */
-    protected function createConnection(array $config)
+    protected function createConnection(array $config): object
     {
         return $this->factory->make($config);
     }
@@ -100,7 +100,7 @@ class GitLabManager extends AbstractManager
      *
      * @return string
      */
-    protected function getConfigName()
+    protected function getConfigName(): string
     {
         return 'gitlab';
     }
@@ -114,7 +114,7 @@ class GitLabManager extends AbstractManager
      *
      * @return array
      */
-    public function getConnectionConfig(string $name = null)
+    public function getConnectionConfig(string $name = null): array
     {
         $config = parent::getConnectionConfig($name);
 
